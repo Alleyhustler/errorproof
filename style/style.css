@@ -1,0 +1,421 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&amp;display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&amp;display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&amp;display=swap');
+
+body {
+  background-color: #436a7b;
+  background-image: url('../images/lostridgenight.png');
+	background-position: top;
+	background-attachment: fixed;
+  font-size: 16px;
+  font-family: "Pixelify Sans", sans-serif;
+  margin: 3em auto;
+}
+
+p {
+  line-height: 1.4em; /*I find the default HTML line-height tends to be a bit claustrophobic for main text*/
+}
+
+hr {
+  border: solid #FFFFFF;
+  border-width: 2px 0 0 0;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+.right {
+  float: right;
+  margin-left: 1em;
+}
+.left {
+  float: left;
+  margin-right: 1em;
+}
+.center {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+@media only screen and (min-width: 600px) {
+  .small {
+    max-width: 60%;
+    height: auto;
+  }
+  
+}
+
+a {
+  color: #5ba3eb;
+}
+
+a:hover { 
+  color: #82d9ce;
+}
+
+.hiding {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.hiding:hover {
+  color: inherit;
+}
+
+h1, h2, h3, h4, h5 {
+  color: #8fa2e3; /*#7282ba at night?*/
+  font-family: "Pixelify Sans", sans-serif;
+}
+
+.caption {
+  margin-top: 0;
+  font-size: 0.8em;
+  font-family: "Pixelify Sans", sans-serif;
+}
+
+.caption2 {
+  margin-top: 0;
+  font-size: 0.6em;
+  font-family: "Pixelify Sans", sans-serif;
+}
+
+.spoiler, .spoiler2 { 
+  color: #000000; 
+  background-color: #000000;
+}
+
+.spoiler:hover {
+  color: white;
+}
+
+.spoiler2:hover { 
+  background-color: white; 
+}
+
+.blackui {
+  padding: 1em;
+  background-color: #000000;
+  background-color: rgb(0,0,0,0.60);
+  border-style: solid;
+  border-width: 1px;
+  border-color: #FFFFFF;
+  border-radius: 25px;
+}
+
+.cyanui {
+  padding: 1em;
+  background-color: #000000;
+  background-color: rgb(73,109,155,0.60);
+  border-style: solid;
+  border-width: 1px;
+  border-color: #FFFFFF;
+  border-radius: 25px;
+}
+
+/*#CONTAINER is the rectangle that contains everything but the background!*/
+#container {
+  margin: 3em auto;
+  width: 90%;
+	max-width: 900px;
+  color: #FFFFFF;
+}
+
+#flex {
+	display: flex;
+}
+
+#content {
+  border-style: solid;
+  border-width: 2px;
+  border-color: white;
+  border-radius: 15px;
+  padding: 10px 15px;
+  background: rgba(0,0,0,0.50);
+  color: white; 
+  outline-width: 4px;
+  outline-offset: 0;
+  flex: 1;
+  order: 2;
+}
+
+/* navigation */
+
+#header {
+  padding: 0 5%;
+}
+#header ul {
+  list-style-type: none;
+  padding: 0.5em 0;
+  margin: 0;
+}
+#header li {
+  font-size: 20px;
+  display: inline-block;
+  padding: 2px;
+  margin: 0.2em 0.4em;
+}
+#header li a {
+  color: #FFFFFF;
+  text-decoration: none;
+  background-color: inherit;
+}
+#header li a:hover {
+  color: #82d5d9; 
+  text-decoration: underline;
+}
+
+* {
+box-sizing: border-box;
+	}
+
+#leftSidebar {
+	order: 1;
+	background: #185186;
+    background: rgba(24,81,134,0.55);
+	width: 140px;
+	max-height: 240px;
+	padding: 20px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	border: 2px solid #185186;
+	border-radius: 15px;
+	text-align: center;
+	font-size: smaller;
+	/* this makes the sidebar text slightly smaller */
+}
+
+/* this is just a cool box, it's the darker colored one */
+.sidebox {
+	background-color: #13092D;
+	border: 1px solid #ED64F5;
+	padding: 10px;
+}
+
+#rightSidebar {
+	order: 3;
+}
+
+@media only screen and (max-width: 800px) {
+	#flex {
+		flex-wrap: wrap;
+	}
+
+	/* the order of the items is adjusted here for responsiveness!
+	since the sidebars would be too small on a mobile device.
+	feel free to play around with the order!
+	*/
+	#container {
+		order: 1;
+	}
+
+	#leftSidebar {
+		order: 2;
+		width: 100%;
+	}
+
+	#rightSidebar {
+		order: 3;
+	}
+
+	#navbar ul {
+		flex-wrap: wrap;
+	}
+}
+
+/* post list */
+
+#postlistdiv ul {
+  font-size: 1.2em;
+  padding: 0;
+  list-style-type: none;
+}
+#recentpostlistdiv ul {
+  font-size: 1.2em;
+  padding: 0;
+  list-style-type: none;
+}
+.moreposts {
+  font-size: 0.8em;
+  margin-top: 0.2em;
+}
+
+/* next and previous links */
+
+#nextprev {
+  text-align: center;
+  margin-top: 1.4em;
+}
+
+/* footer */
+#footer {
+  font-size: 0.6em;
+  padding: 5px 2% 10px;
+  text-align: right;
+  text-shadow: 1px 1px #828282;
+}
+
+#footer a {
+  color: white;
+  text-decoration: none;
+}
+
+#footer a:hover {
+  text-shadow: 1px 1px #5bb2a4;
+}
+
+/* light mode */
+
+@media (prefers-color-scheme: light) {
+	body {
+	  background-color: #81c5b8;
+	  background-image: url('../images/lostridgeday.png');
+	}
+	
+	h1, h2, h3, h4, h5 {
+	  color: #81c5b8;
+	}
+	
+	a {
+	  color: #70a6db;
+	}
+
+	a:hover { 
+	  color: #96d9bd;
+	}
+	
+	#footer a:hover {
+	  text-shadow: 1px 1px #0f6a80;
+	}	
+}
+
+/* top button */
+
+#topbut {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 16px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: white;
+  border-radius: 15px;
+  padding: 10px 15px;
+  background: rgba(0,0,0,0.50);
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#topbut:hover {
+  background-color: #38afe0;
+  border-color: #38afe0;
+}
+
+/* changelog */
+
+#changelog {
+  max-height:300px;
+  background-color:darkcyan;
+  background-color:rgba(63,136,150,0.6);
+  color:white;
+  border-radius: 1em;
+  border: 6px double #ccc;
+  border-color: #3f8896;
+  overflow:auto;
+  padding:1em;
+  font-family: "Pixelify Sans", sans-serif;
+}
+
+#changelog dt {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+#changelog a {
+  color: #69cfff;
+}
+
+#changelog a:hover {
+  color: #6fc9bd;
+}
+
+.changelogdetails {
+  background-color:darkcyan;
+  background-color:rgba(89,180,180,0.6);
+  color: white;
+  border-radius: 1em;
+  border: 5px double #ccc;
+  border-color: #3f8896;
+  overflow: auto;
+  max-height: 300px;
+  padding: 10px;
+  font-family: "Pixelify Sans", sans-serif;
+}
+
+.changelogdetails dt {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.changelogdetails a {
+  color: #69cfff;
+}
+
+.changelogdetails a:hover {
+  color: #6fc9bd;
+}
+
+/* status.cafe */
+
+#statuscafe {
+    padding: 1em;
+  font-family: "Pixelify Sans", sans-serif;
+	  color: white;
+	  background: #185186;
+    background: rgba(24,81,134,0.55);
+	  background-image: linear-gradient(to right bottom, rgba(24,123,134,0.55), rgba(0,0,0,0.55), rgba(0,0,0,0.55), rgba(0,0,0,0.55), rgba(0,0,0,0.55), rgba(24,123,134,0.55));
+	  border-radius: 2em;
+}
+
+#statuscafe-username {
+    margin-bottom: .5em;
+}
+
+#statuscafe-username a {
+    color: white;
+}
+
+#statuscafe-username a:hover {
+    color: mediumaquamarine;
+}
+
+#statuscafe-content {
+    margin: 0 1em 0.5em 1em;
+}
+
+/* gallery preview */
+
+.gallerypreview {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	grid-gap: 5px;
+	margin: auto;
+}
+
+.galleryitem {
+	padding:5px;
+	font-size: .85em;
+	max-width: 95%;
+  font-family: "Pixelify Sans", sans-serif;
+	font-weight: bold;
+	text-align: center;
+}
