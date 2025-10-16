@@ -52,9 +52,9 @@ if ( url.includes("posts/") ) {
 // Write the Header HTML, a series of list items containing links.
 let headerHTML = '<ul>' +
   '<li><a href="' + relativePath + '/index.html" target="_blank">Home</a></li>' +
-  '<li><a href="https://x.com" target="_blank" rel="noopener noreferrer">Twitter</a></li>' +
-  '<li><a href="https://pumpfun.com" target="_blank" rel="noopener noreferrer">Library</a></li>' +
-  '<li><a href="https://zones.com" target="_blank" rel="noopener noreferrer">Error Proofed</a></li>' +
+  '<li><a href="https://x.com/ErrorProofSOL" target="_blank" rel="noopener noreferrer">Twitter</a></li>' +
+  '<li><a href="https://x.com/ErrorProofSOL" target="_blank" rel="noopener noreferrer">Library</a></li>' +
+  '<li><a href="https://en.wikipedia.org/wiki/List_of_HTTP_status_codes" target="_blank" rel="noopener noreferrer">Error Proofed</a></li>' +
   '</ul>';
 
 //Write the Footer HTML, which has information about the blog.
